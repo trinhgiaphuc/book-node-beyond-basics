@@ -289,7 +289,7 @@ To pass down messages from the parent to the child, we can execute the `send` fu
 
 When executing the `parent.js` file above, it'll first send down the `{ hello: 'world' }` object to be printed by the forked child process and then the forked child process will send an incremented counter value every second to be printed by the parent process.
 
-image::/images/picturenode9.png[]
+image::images/picturenode9.png[]
 
 Let's do a more practical example about the `fork` function.
 

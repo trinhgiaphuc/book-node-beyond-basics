@@ -126,7 +126,7 @@ When the application runs as a worker, it can start doing the actual work. This 
 
 That's basically it. That's how easy it is to take advantage of all the processing power in a machine. To test the cluster, run the `cluster.js` file:
 
-image::/images/picturenode10.png[]
+image::images/picturenode10.png[]
 
 I have 8 cores on my machine so it started 8 processes. It's important to understand that these are completely different Node processes. Each worker process here will have its own event loop and memory space.
 
@@ -162,7 +162,7 @@ process.on("message", msg => {
 
 Here is what I see when I test these two additions to the cluster/server example:
 
-image::/images/picturenode11.png[]
+image::images/picturenode11.png[]
 
 Every worker received a message from the master process. *Note how the workers did not start in order.*
 

@@ -530,7 +530,7 @@ console.log(*addon.hello()*);
 
 We can actually see the support of the three extensions by looking at `require.extensions`.
 
-image::/images/picturenode2.png[]
+image::images/picturenode2.png[]
 
 Looking at the functions for each extension, you can clearly see what Node will do with each. It uses `module._compile` for `.js` files, `JSON.parse` for `.json` files, and `process.dlopen` for `.node` files.
 
@@ -756,7 +756,7 @@ Caching is important to understand. Let me use a simple example to demonstrate i
 
 Say that you have the following `ascii-art.js` file that prints a cool looking header message:
 
-image::/images/picturenode3.png[]
+image::images/picturenode3.png[]
 
 We want to display this header every time we **require** the file. If we require the file twice, we want the header to show up twice.
 

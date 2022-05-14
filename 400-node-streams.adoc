@@ -20,7 +20,7 @@ Streams are collections of data – just like arrays or strings. The difference 
 
 However, streams are not only about working with big data. They also give us the power of composability in our code. Just like we can compose powerful Linux commands by piping other smaller Linux commands, we can do exactly the same in Node with streams.
 
-image::/images/picturenode4.png[]
+image::images/picturenode4.png[]
 
 [source, js]
 [subs="+quotes,+macros"]
@@ -104,11 +104,11 @@ Well, let's see what happens when we run the server, connect to it, and monitor 
 
 When I ran the server, it started out with a normal amount of memory, *8.7 MB*:
 
-image::/images/picturenode5.png[]
+image::images/picturenode5.png[]
 
 Then I connected to the server. Note what happened to the memory consumed:
 
-image::/images/picturenode6.png[]
+image::images/picturenode6.png[]
 The memory consumption jumped to **434.8 MB**.
 
 We basically put the whole `big.file` content in memory before we wrote it out to the response object. This is very inefficient.
@@ -133,7 +133,7 @@ server.listen(8000);
 
 Now, when you connect to this server, a magical thing happens (look at the memory consumption):
 
-image::/images/picturenode7.png[]
+image::images/picturenode7.png[]
 
 *What's happening?*
 
@@ -536,7 +536,7 @@ We pass the input string (for example, “`a,b,c,d`”) through `commaSplitter`,
 
 We then take the array and pipe it into the `arrayToObject` stream. We need a `writableObjectMode` flag to make that stream accept an object. It'll also push an object (the input array mapped into an object) and that's why we also needed the `readableObjectMode` flag there as well. The last `objectToString` stream accepts an object but pushes out a string, and that's why we only needed a `writableObjectMode` flag there. The readable part is a normal string (the `stringified` object).
 
-image::/images/picturenode8.png[]
+image::images/picturenode8.png[]
 
 == Built-in transform streams
 

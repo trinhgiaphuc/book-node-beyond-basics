@@ -194,7 +194,7 @@ A Node process can be idle but it never sleeps. It keeps track of all the callba
 
 They're all defined on a global variable (which is usually compared to the window variable in browsers). In a Node's REPL, type `global`. (with a dot) and hit tab twice to see all the items available (or simply hit the tab key twice on an empty line). Some of these items are JavaScript structures (like `Array` and `Object`). Some of them are Node library functions (like `setTimeout`, or console to print to `stdout`/`stderr`), and some of them are Node global objects that you can use for certain tasks (for example, `process.env` can be used to read the host environment variables).
 
-image::/images/picturenode1.png[]
+image::images/picturenode1.png[]
 
 You need to understand most of what you see in that list.
 
